@@ -47,6 +47,10 @@ export default function() {
   });
 
   sleep(1);*/
-  http.get('http://test.k6.io/contacts.php');
+  const res = http.get('http://test.k6.io/contacts.php');
+
+  check(res, {
+    'status is 200': r => r.status === 200,
+  })
   sleep(3);
 }
