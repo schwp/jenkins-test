@@ -13,5 +13,9 @@ RUN echo "deb [arch=$(dpkg --print-architecture) \
 
 RUN apt-get update && apt-get install -y docker-ce-cli
 
+COPY setup_k6.sh /usr/local/bin/setup_k6.sh
+RUN chmod +x /usr/local/bin/setup_k6.sh
+RUN /usr/local/bin/setup_k6.sh
+
 USER jenkins
 RUN jenkins-plugin-cli --plugins "blueocean docker-workflow"
