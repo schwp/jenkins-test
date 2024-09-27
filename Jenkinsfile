@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Version k6') {
             steps {
-                sh 'k6 -v'
+                sh 'k6 --version'
             }
         }
     }
