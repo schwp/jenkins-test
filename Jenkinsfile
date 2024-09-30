@@ -4,7 +4,7 @@ pipeline {
         stage('Version k6') {
             steps {
               sh 'ls -la'
-              sh 'which k6'
+              sh '/usr/local/bin/k6 --version'
               //sh 'k6 run performance-test.js'
             }
         }
