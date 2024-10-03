@@ -8,5 +8,11 @@ pipeline {
         sh 'node --version'
       }
     }
+
+    stage('Content') {
+      steps {
+        sh 'ls -la'
+      }
+    }
   }
 }
