@@ -20,7 +20,7 @@ pipeline {
 
     stage ('Running ...') {
       steps {
-        sh 'k6 run performance-test.js'
+        sh 'K6_WEB_DASHBOARD=true k6 run performance-test.js'
       }
     }
   }
