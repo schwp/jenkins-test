@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'grafana/k6:latest-with-browser'
-      args '--entrypoint=""'
+      args '--entrypoint="" -p 5665:5665'
     }
   }
   stages {
