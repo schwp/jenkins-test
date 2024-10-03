@@ -17,5 +17,11 @@ pipeline {
         sh 'cat performance-test.js'
       }
     }
+
+    stage ('Running ...') {
+      steps {
+        sh 'k6 run performance-test.js'
+      }
+    }
   }
 }
